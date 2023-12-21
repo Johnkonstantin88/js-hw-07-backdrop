@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    'index': "./src/index.js",
-    'gallery': "./src/gallery.js",
+    'index': "./src/js/index.js",
+    'gallery': "./src/js/gallery.js",
   },
 
   output: {
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sass|scss|css)$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", 'postcss-loader', "sass-loader"],
       },
 
